@@ -1,3 +1,6 @@
+checkpoints_mlt
+data/dataset
+*.DS_Store
 __pycache__/
 cache/
 pretrain/
@@ -13,3 +16,4 @@ checkpoints/
 *.so
 *.swp
 *.pb
+*.ckpt
