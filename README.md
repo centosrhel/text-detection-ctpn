@@ -28,7 +28,7 @@ there are some parameters you may need to modify according to your requirement, 
 # training
 ## setup
 - requirements: python2.7, tensorflow1.3, cython0.24, opencv-python, easydict,(recommend to install Anaconda)
-- if you do not have a gpu device,follow here to [setup](https://github.com/eragonruan/text-detection-ctpn/issues/43)
+- if you do not have a gpu device,follow here to [setup](https://github.com/eragonruan/text-detection-ctpn/issues/43): Set "USE_GPU_NMS " in the file ./ctpn/text.yml as "False"; Set the "__C.USE_GPU_NMS" in the file ./lib/fast_rcnn/config.py as "False"; Comment out the line "from lib.utils.gpu_nms import gpu_nms" in the file ./lib/fast_rcnn/nms_wrapper.py; cd lib/utils; python setup.py build; copy the .so file from the "build" directory to pwd; cd to the project root, and python ./ctpn/demo.py
 - if you have a gpu device, build the library by
 ```shell
 cd lib/utils
