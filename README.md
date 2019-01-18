@@ -28,7 +28,8 @@ It will generate a nms.so and a bbox.so in current folder.
 ```shell
 python ./main/demo.py
 ```
-注意：执行```python */*.py```时，无论.py文件在什么路径，若其包含```a = os.getcwd()```，则a的值为当前路径。实际上，```python */*.py```的效果是在当前目录启动python解释器，然后在python解释器中解释执行```*/*.py```中的语句。```*/*.py```中的相对路径均是相对于当前目录。
+注意：执行```python */*.py```时，无论.py文件在什么路径，若其包含```a = os.getcwd()```，则a的值为当前路径。实际上，```python */*.py```的效果是在当前目录启动python解释器，然后在python解释器中解释执行```*/*.py```中的语句。```*/*.py```中的相对路径均是相对于当前目录。但是import语句在搜索模块时，“当前目录”指.py文件所在的目录。
+首次import一个模块时，会在当前目录解释执行该模块中的语句。
 ***
 # training
 ## prepare data
